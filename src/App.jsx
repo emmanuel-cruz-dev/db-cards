@@ -1,13 +1,7 @@
-import CardContainer from "./components/CardContainer";
-import Navbar from "./layouts/Navbar";
+import AppRouter from "./routes/AppRouter";
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <CardContainer />
-    </>
-  );
+  return <AppRouter />;
 }
 
 export default App;
