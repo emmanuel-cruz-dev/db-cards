@@ -2,14 +2,21 @@ import React from "react";
 import { Card, Placeholder } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function CharacterCard({ id, name, description, image, isLoading = false }) {
+function CharacterCard({
+  id,
+  name,
+  race,
+  description,
+  image,
+  isLoading = false,
+}) {
   if (isLoading) {
     return (
       <Card style={{ width: "18rem" }}>
         <Placeholder
           as="div"
           animation="glow"
-          style={{ height: "16rem", backgroundColor: "#e9ecef" }}
+          style={{ height: "15rem", backgroundColor: "#e9ecef" }}
         />
         <Card.Body>
           <Placeholder as={Card.Title} animation="glow">
@@ -28,14 +35,15 @@ function CharacterCard({ id, name, description, image, isLoading = false }) {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Img
-        className="py-3"
+        className="py-2"
         variant="top"
         src={image}
         alt={name}
-        style={{ height: "16rem", objectFit: "contain" }}
+        style={{ height: "15rem", objectFit: "contain" }}
       />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
+        <Card.Text className="mb-1">Raza: {race}</Card.Text>
         <Card.Text className="line-clamp-3">{description}</Card.Text>
         <Link to={`/details/${id}`} className="btn btn-primary">
           Ver más
