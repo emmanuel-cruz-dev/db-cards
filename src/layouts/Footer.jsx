@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light text-center p-3">
+    <footer className="bg-black text-light text-center p-3">
       <Container>
         <p className="mb-0">
           2025 · Derechos Reservados | Versión: 1.0 ·{" "}
