@@ -6,6 +6,7 @@ import NotFound from "../pages/NotFound";
 import Planets from "../pages/Planets";
 import Transformations from "../pages/Transformations";
 import PlanetDetails from "../pages/PlanetDetails";
+import CharacterDetails from "../pages/CharacterDetails";
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
         <main className="flex-grow-1 bg-dark">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/characters/:id" element={<CharacterDetails />} />
             <Route path="/planets" element={<Planets />} />
             <Route path="/planets/:id" element={<PlanetDetails />} />
             <Route path="/transformations" element={<Transformations />} />
