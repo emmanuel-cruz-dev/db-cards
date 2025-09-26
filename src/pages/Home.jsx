@@ -5,7 +5,7 @@ import CharactersGallery from "../components/ui/CharactersGallery";
 function Home() {
   return (
     <Container className="py-4">
-      <h1 className="display-4 fw-semibold pb-4">Personajes</h1>
+      <h1 className="display-5 fw-semibold pb-4 text-light">Personajes</h1>
       <CharactersGallery />
     </Container>
   );
