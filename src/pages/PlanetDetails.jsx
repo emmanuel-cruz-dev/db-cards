@@ -1,9 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Alert, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { usePlanetById } from "../hooks/usePlanets";
 import PlanetDetailsCard from "../components/ui/PlanetDetailsCard";
 import CharacterCard from "../components/ui/CharacterCard";
+import AlertMessage from "../components/ui/AlertMessage";
 
 function PlanetDetails() {
   const { id } = useParams();
@@ -46,9 +47,7 @@ function PlanetDetails() {
           )}
 
           {!isLoading && planet && planet.characters.length === 0 && (
-            <Alert variant="info" className="text-center">
-              Este planeta no tiene habitantes registrados.
-            </Alert>
+            <AlertMessage message="Este planeta no tiene habitantes registrados." />
           )}
         </>
       )}
