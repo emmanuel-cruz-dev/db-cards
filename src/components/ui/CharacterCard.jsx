@@ -51,7 +51,7 @@ function CharacterCard({
           <strong>Raza:</strong> {race}
         </Card.Text>
         <Card.Text className="line-clamp-3">{description}</Card.Text>
-        <Link to={`/details/${id}`} className="btn btn-primary">
+        <Link to={`/characters/${id}`} className="btn btn-primary">
           Ver más
         </Link>
       </Card.Body>
