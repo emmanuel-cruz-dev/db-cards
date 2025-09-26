@@ -39,11 +39,17 @@ function CharacterCard({
         variant="top"
         src={image}
         alt={name}
-        style={{ height: "15rem", objectFit: "contain" }}
+        style={{
+          height: "15rem",
+          objectFit: "contain",
+          backgroundColor: "#e9ecef",
+        }}
       />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
-        <Card.Text className="mb-1">Raza: {race}</Card.Text>
+        <Card.Text className="mb-1">
+          <strong>Raza:</strong> {race}
+        </Card.Text>
         <Card.Text className="line-clamp-3">{description}</Card.Text>
         <Link to={`/details/${id}`} className="btn btn-primary">
           Ver más
