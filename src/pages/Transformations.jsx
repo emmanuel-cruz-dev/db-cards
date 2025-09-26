@@ -4,8 +4,8 @@ import TransformationsGallery from "../components/ui/TransformationsGallery";
 
 function Transformations() {
   return (
-    <Container>
-      <h1>Transformaciones</h1>
+    <Container className="py-4">
+      <h1 className="display-4 fw-semibold pb-4">Transformaciones</h1>
       <TransformationsGallery />
     </Container>
   );
