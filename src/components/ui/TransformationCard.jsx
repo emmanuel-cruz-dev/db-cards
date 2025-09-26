@@ -36,7 +36,9 @@ function TransformationCard({ id, name, image, description, ki, isLoading }) {
       />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
-        <Card.Text className="mb-1">Ki: {ki}</Card.Text>
+        <Card.Text className="mb-1">
+          <strong>Ki:</strong> {ki}
+        </Card.Text>
         <Card.Text className="line-clamp-3">{description}</Card.Text>
         <Link to={`/details/${id}`} className="btn btn-primary">
           Ver más
