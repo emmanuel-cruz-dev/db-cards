@@ -11,7 +11,7 @@ export const useGetTransformations = () => {
 export const useTransformationById = (id) => {
   return useQuery({
     queryKey: ["transformation", id],
-    queryFn: transformationService.getTransformationById(id),
+    queryFn: () => transformationService.getTransformationById(id),
     enabled: !!id,
   });
 };

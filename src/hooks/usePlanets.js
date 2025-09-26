@@ -11,7 +11,7 @@ export const useGetPlanets = () => {
 export const usePlanetById = (id) => {
   return useQuery({
     queryKey: ["planet", id],
-    queryFn: planetService.getPlanetById(id),
+    queryFn: () => planetService.getPlanetById(id),
     enabled: !!id,
   });
 };

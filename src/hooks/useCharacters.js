@@ -11,7 +11,7 @@ export const useGetCharacters = () => {
 export const useCharacterById = (id) => {
   return useQuery({
     queryKey: ["character", id],
-    queryFn: characterService.getCharacterById(id),
+    queryFn: () => characterService.getCharacterById(id),
     enabled: !!id,
   });
 };
