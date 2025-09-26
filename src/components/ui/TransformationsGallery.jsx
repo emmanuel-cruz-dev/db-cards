@@ -11,7 +11,7 @@ function TransformationsGallery() {
 
   return (
     <Container>
-      <Row className="g-3">
+      <Row className="g-3 justify-content-center">
         {isLoading
           ? Array.from({ length: 6 }).map((_, index) => (
               <Col key={`placeholder-${index}`} xs={12} md={6} lg={4} xl={3}>
