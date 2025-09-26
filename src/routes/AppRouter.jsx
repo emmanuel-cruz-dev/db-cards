@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import Planets from "../pages/Planets";
 import Transformations from "../pages/Transformations";
-// import Details from "../pages/Details";
+import PlanetDetails from "../pages/PlanetDetails";
 
 const AppRouter = () => {
   return (
@@ -16,8 +16,8 @@ const AppRouter = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/planets" element={<Planets />} />
+            <Route path="/planets/:id" element={<PlanetDetails />} />
             <Route path="/transformations" element={<Transformations />} />
-            {/* <Route path="/details/:id" element={<Details />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
