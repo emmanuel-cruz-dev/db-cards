@@ -2,7 +2,7 @@ import axios from "./axiosConfig";
 
 const getCharacters = async () => {
   try {
-    const response = await axios.get("/api/characters");
+    const response = await axios.get("/api/characters?limit=12");
     return response.data;
   } catch (error) {
     const axiosError = error;
