@@ -32,7 +32,11 @@ function TransformationCard({ id, name, image, description, ki, isLoading }) {
         variant="top"
         src={image}
         alt={name}
-        style={{ height: "14rem", objectFit: "contain" }}
+        style={{
+          height: "14rem",
+          objectFit: "contain",
+          backgroundColor: "#e9ecef",
+        }}
       />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
