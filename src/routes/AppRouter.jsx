@@ -12,7 +12,7 @@ const AppRouter = () => {
     <Router>
       <div className="d-flex flex-column min-vh-100">
         <NavigationBar />
-        <main className="flex-grow-1">
+        <main className="flex-grow-1 bg-dark">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/planets" element={<Planets />} />
