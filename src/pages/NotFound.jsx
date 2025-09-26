@@ -27,10 +27,10 @@ function NotFound() {
           </header>
 
           <main className="mb-4">
-            <h2 className="h3 fw-bold text-dark mb-3">
+            <h2 className="h3 fw-bold text-light mb-3">
               ¡Oops! Página no encontrada
             </h2>
-            <p className="lead text-muted mb-4 px-3">
+            <p className="lead text-light mb-4 px-3">
               La página que estás buscando no existe o ha sido movida.
             </p>
           </main>
@@ -49,7 +49,7 @@ function NotFound() {
             <Button
               variant="outline-secondary"
               onClick={handleGoBack}
-              className="px-4 py-2 fw-semibold rounded-pill"
+              className="px-4 py-2 fw-semibold rounded-pill text-light"
             >
               <ArrowLeft className="me-2" size={18} />
               Volver atrás
