@@ -13,7 +13,7 @@ function PlanetsGallery() {
       <Row className="g-3 justify-content-center">
         {isLoading
           ? Array.from({ length: 6 }).map((_, index) => (
-              <Col key={`placeholder-${index}`} xs={12} md={6} lg={4} xl={4}>
+              <Col key={`placeholder-${index}`} xs={12} md={7} lg={6} xl={4}>
                 <PlanetCard isLoading={true} />
               </Col>
             ))
