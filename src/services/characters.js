@@ -1,8 +1,8 @@
 import axios from "./axiosConfig";
 
-const getCharacters = async () => {
+const getCharacters = async (page) => {
   try {
-    const response = await axios.get("/api/characters?limit=12");
+    const response = await axios.get(`/api/characters?page=${page}&limit=9`);
     return response.data;
   } catch (error) {
     const axiosError = error;
@@ -10,6 +10,7 @@ const getCharacters = async () => {
       "[getCharacters] Error fetching characters:",
       axiosError.response.data
     );
+    throw error;
   }
 };
 
@@ -23,6 +24,7 @@ const getCharacterById = async (id) => {
       "[getCharacterById] Error fetching character:",
       axiosError.response.data
     );
+    throw error;
   }
 };
 
