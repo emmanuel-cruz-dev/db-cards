@@ -21,6 +21,7 @@ function TransformationDetailsCard({ transformation, isLoading = false }) {
             style={{
               position: "relative",
               height: "100%",
+              maxHeight: "500px",
               overflow: "hidden",
             }}
           >
