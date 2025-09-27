@@ -2,7 +2,7 @@ import axios from "./axiosConfig";
 
 const getPlanets = async () => {
   try {
-    const response = await axios.get("/api/planets");
+    const response = await axios.get("/api/planets"); // TODO : agregar limite de planetas y paginación
     return response.data;
   } catch (error) {
     const axiosError = error;
@@ -10,6 +10,7 @@ const getPlanets = async () => {
       "[getPlanets] Error fetching planets:",
       axiosError.response.data
     );
+    throw error;
   }
 };
 
@@ -23,6 +24,7 @@ const getPlanetById = async (id) => {
       "[getPlanetById] Error fetching planet:",
       axiosError.response.data
     );
+    throw error;
   }
 };
 
