@@ -1,48 +1,21 @@
 import React from "react";
-import { Card, Row, Col, Badge, Placeholder } from "react-bootstrap";
+import { Card, Row, Col, Badge } from "react-bootstrap";
+import PlanetDetailsCardPlaceholder from "./PlanetDetailsCardPlaceholder";
 
 function PlanetDetailsCard({ planet, isLoading = false }) {
-  if (isLoading) {
-    return (
-      <Card className="mb-4 shadow-lg">
-        <Row className="g-0">
-          <Col md={6}>
-            <Placeholder
-              as="div"
-              animation="glow"
-              style={{ height: "400px", backgroundColor: "#e9ecef" }}
-            />
-          </Col>
-          <Col md={6}>
-            <Card.Body className="p-4">
-              <Placeholder as={Card.Title} animation="glow" className="mb-3">
-                <Placeholder xs={8} size="lg" />
-              </Placeholder>
-              <Placeholder as="div" animation="glow" className="mb-3">
-                <Placeholder xs={4} />
-              </Placeholder>
-              <Placeholder as={Card.Text} animation="glow">
-                <Placeholder xs={12} />
-                <Placeholder xs={10} />
-                <Placeholder xs={8} />
-                <Placeholder xs={11} />
-                <Placeholder xs={9} />
-              </Placeholder>
-            </Card.Body>
-          </Col>
-        </Row>
-      </Card>
-    );
-  }
+  if (isLoading) return <PlanetDetailsCardPlaceholder />;
 
   return (
-    <Card className="mb-5 shadow-lg border-0">
+    <Card
+      className="mb-5 shadow-lg border-0"
+      style={{ overflow: "hidden", borderRadius: "0.375rem" }}
+    >
       <Row className="g-0">
         <Col md={6}>
           <div
             style={{
               position: "relative",
-              height: "400px",
+              height: "100%",
               overflow: "hidden",
             }}
           >
@@ -54,8 +27,6 @@ function PlanetDetailsCard({ planet, isLoading = false }) {
                 height: "100%",
                 objectFit: "cover",
                 borderRadius: "0",
-                borderTopLeftRadius: "calc(0.375rem - 1px)",
-                borderBottomLeftRadius: "calc(0.375rem - 1px)",
               }}
             />
             {planet.isDestroyed && (
@@ -83,9 +54,6 @@ function PlanetDetailsCard({ planet, isLoading = false }) {
             className="p-4 d-flex flex-column justify-content-center h-100"
             style={{
               backgroundColor: "#e0e0e0",
-              borderRadius: "0",
-              borderTopRightRadius: "calc(0.375rem - 1px)",
-              borderBottomRightRadius: "calc(0.375rem - 1px)",
             }}
           >
             <div>
