@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { characterService } from "../services/characters";
 
-export const useGetCharacters = () => {
+export const useGetCharacters = (page) => {
   return useQuery({
-    queryKey: ["characters"],
-    queryFn: characterService.getCharacters,
+    queryKey: ["characters", page],
+    queryFn: () => characterService.getCharacters(page),
   });
 };
 
