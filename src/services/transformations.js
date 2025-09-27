@@ -10,6 +10,7 @@ const getTransformations = async () => {
       "[getTransformations] Error fetching transformations:",
       axiosError.response.data
     );
+    throw error;
   }
 };
 
@@ -23,6 +24,7 @@ const getTransformationById = async (id) => {
       "[getTransformationById] Error fetching transformation:",
       axiosError.response.data
     );
+    throw error;
   }
 };
 
