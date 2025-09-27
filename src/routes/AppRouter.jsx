@@ -7,6 +7,7 @@ import Planets from "../pages/Planets";
 import Transformations from "../pages/Transformations";
 import PlanetDetails from "../pages/PlanetDetails";
 import CharacterDetails from "../pages/CharacterDetails";
+import TransformationDetails from "../pages/TransformationDetails";
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,10 @@ const AppRouter = () => {
             <Route path="/planets" element={<Planets />} />
             <Route path="/planets/:id" element={<PlanetDetails />} />
             <Route path="/transformations" element={<Transformations />} />
+            <Route
+              path="/transformations/:id"
+              element={<TransformationDetails />}
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
