@@ -35,6 +35,14 @@ function CharactersGallery() {
 
   return (
     <Container>
+      {characters.meta && (
+        <article className="text-center text-light mb-3">
+          <p>
+            Página <strong>{characters.meta.currentPage}</strong> de{" "}
+            <strong>{characters.meta.totalPages}</strong>
+          </p>
+        </article>
+      )}
       <Row className="g-3 justify-content-center">
         {characters.items.map((character) => (
           <Col key={character.id} xs={12} md={6} lg={4} xl={4}>
