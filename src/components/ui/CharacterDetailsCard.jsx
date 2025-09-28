@@ -83,14 +83,24 @@ function CharacterDetailsCard({ character, isLoading = false }) {
               >
                 {character.name}
               </Card.Title>
-              <Card.Text>
-                <strong>Género: </strong>
-                {character.gender == "Male" ? "Masculino" : "Femenino"}
-              </Card.Text>
-              <Card.Text>
-                <strong>Ki: </strong>
-                {character.ki}
-              </Card.Text>
+              <ul className="list-unstyled">
+                <li>
+                  <strong>Género: </strong>
+                  {character.gender == "Male" ? "Masculino" : "Femenino"}
+                </li>
+                <li>
+                  <strong>Ki: </strong>
+                  {character.ki}
+                </li>
+                <li>
+                  <strong>Ki Máximo: </strong>
+                  {character.maxKi}
+                </li>
+                <li>
+                  <strong>Alianza: </strong>
+                  {character.affiliation}
+                </li>
+              </ul>
 
               <Card.Text
                 style={{
