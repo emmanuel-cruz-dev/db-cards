@@ -1,18 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CharacterCard from "./CharacterCard";
 import { useGetCharacters } from "../../hooks/useCharacters";
 import PaginationItem from "./PaginationItem";
+import { usePagination } from "../../hooks/usePagination";
 
 function CharactersGallery() {
-  const [page, setPage] = useState(1);
-  const { data: characters, isLoading, error } = useGetCharacters(page);
+  const { currentPage, handlePageChange } = usePagination(1);
+  const { data: characters, isLoading, error } = useGetCharacters(currentPage);
 
   if (error) return <p>Error al cargar los personajes: {error.message}</p>;
 
   if (isLoading && !characters) {
     return (
       <Container>
+        <article>
+          <p>Cargando páginas...</p>
+        </article>
         <Row className="g-3 justify-content-center">
           {Array.from({ length: 6 }).map((_, index) => (
             <Col key={`placeholder-${index}`} xs={12} md={6} lg={4} xl={4}>
@@ -27,11 +31,6 @@ function CharactersGallery() {
   if (!characters || !characters.items) {
     return <p>No se han encontrado personajes</p>;
   }
-
-  const handlePageChange = (newPage) => {
-    setPage(newPage);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
     <Container>
