@@ -1,8 +1,8 @@
 import axios from "./axiosConfig";
 
-const getPlanets = async () => {
+const getPlanets = async (page) => {
   try {
-    const response = await axios.get("/api/planets"); // TODO : agregar limite de planetas y paginación
+    const response = await axios.get(`/api/planets?page=${page}&limit=9`);
     return response.data;
   } catch (error) {
     const axiosError = error;
