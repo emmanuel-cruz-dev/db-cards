@@ -1,16 +1,62 @@
-# React + Vite
+# Dragon Ball Cards
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React** y **Vite** que utiliza la [Dragon Ball API](https://web.dragonball-api.com/) para mostrar tarjetas (cards) de personajes, planetas y sus transformaciones del universo Dragon Ball. Permite explorar y ver detalles de cada entidad mediante rutas dinámicas.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Personajes:** Galería paginada de personajes con detalles individuales, incluyendo raza, ki, afiliación y transformaciones.
+- **Planetas:** Listado de planetas con imagen, descripción, estado y habitantes asociados.
+- **Transformaciones:** Sección dedicada a las transformaciones, mostrando detalles y personaje relacionado.
+- **Navegación:** Barra de navegación para acceder fácilmente a cada sección.
+- **Detalles:** Cada card permite ver información ampliada mediante rutas con IDs.
+- **Manejo de errores y carga:** Placeholders y alertas para mejorar la experiencia de usuario.
 
-## React Compiler
+## Tecnologías utilizadas
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19**
+- **Vite** (build y desarrollo rápido)
+- **React Router DOM** (ruteo SPA)
+- **React Bootstrap** y **Bootstrap** (UI y estilos)
+- **Axios** (peticiones HTTP)
+- **@tanstack/react-query** (manejo de datos asíncronos y caché)
+- **ESLint** (calidad de código)
+- **Vercel** (despliegue)
 
-## Expanding the ESLint configuration
+## Estructura de carpetas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/components/ui/`: Componentes visuales reutilizables (cards, galerías, placeholders, alertas, paginación).
+- `src/pages/`: Vistas principales (Home, Personajes, Planetas, Transformaciones, Detalles, NotFound).
+- `src/services/`: Lógica para consumir la API de Dragon Ball.
+- `src/hooks/`: Custom hooks para manejo de datos y navegación.
+- `src/layouts/`: Componentes de layout (Navbar, Footer).
+- `src/routes/`: Configuración de rutas de la app.
+
+## Instalación y ejecución
+
+```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm run dev
+
+# Compilar para producción
+npm run build
+
+# Previsualizar build
+npm run preview
+
+# Linting
+npm run lint
+```
+
+## Despliegue
+
+La app está lista para ser desplegada en **Vercel**. El archivo `vercel.json` asegura el correcto enrutamiento SPA.
+
+## Créditos
+
+- API: [Dragon Ball API](https://web.dragonball-api.com/)
+- Autor: [Tu nombre o GitHub](https://github.com/emmanuel-cruz-dev/db-cards)
+
+---
