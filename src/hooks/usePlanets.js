@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { planetService } from "../services/planets";
 
-export const useGetPlanets = () => {
+export const useGetPlanets = (page) => {
   return useQuery({
-    queryKey: ["planets"],
-    queryFn: planetService.getPlanets,
+    queryKey: ["planets", page],
+    queryFn: () => planetService.getPlanets(page),
   });
 };
 
