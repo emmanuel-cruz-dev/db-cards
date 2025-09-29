@@ -58,5 +58,3 @@ La app está lista para ser desplegada en **Vercel**. El archivo `vercel.json` a
 
 - API: [Dragon Ball API](https://web.dragonball-api.com/)
 - Autor: [Emmanuel Cruz](https://github.com/emmanuel-cruz-dev/)
-
----
