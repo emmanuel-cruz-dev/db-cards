@@ -4,12 +4,17 @@ import PlanetCard from "./PlanetCard";
 import { useGetPlanets } from "../../hooks/usePlanets";
 import PaginationItem from "./PaginationItem";
 import { usePagination } from "../../hooks/usePagination";
+import { handleRetry } from "../../utils/utils";
+import ErrorMessage from "./ErrorMessage";
 
 function PlanetsGallery() {
   const { currentPage, handlePageChange } = usePagination(1);
   const { data: planets, isLoading, error } = useGetPlanets(currentPage);
 
-  if (error) return <p>Error al cargar los planetas: {error.message}</p>;
+  if (error)
+    return (
+      <ErrorMessage error={error} entity="Planetas" onRetry={handleRetry} />
+    );
 
   if (isLoading && !planets) {
     return (
@@ -43,7 +48,7 @@ function PlanetsGallery() {
         </article>
       )}
       <Row className="g-3 justify-content-center">
-        {planets.items.map((planet) => (
+        {planets?.items.map((planet) => (
           <Col key={planet.id} xs={12} md={7} lg={6} xl={4}>
             <PlanetCard
               id={planet.id}
