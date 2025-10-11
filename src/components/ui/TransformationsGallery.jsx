@@ -2,12 +2,20 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import TransformationCard from "./TransformationCard";
 import { useGetTransformations } from "../../hooks/useTransformations";
+import { handleRetry } from "../../utils/utils";
+import ErrorMessage from "./ErrorMessage";
 
 function TransformationsGallery() {
   const { data: transformations, isLoading, error } = useGetTransformations();
 
   if (error)
-    return <p>Error al cargar las transformaciones: {error.message}</p>;
+    return (
+      <ErrorMessage
+        error={error}
+        entity="Transformaciones"
+        onRetry={handleRetry}
+      />
+    );
 
   return (
     <Container>
@@ -18,7 +26,7 @@ function TransformationsGallery() {
                 <TransformationCard isLoading={true} />
               </Col>
             ))
-          : transformations.map((transformation) => (
+          : transformations?.map((transformation) => (
               <Col key={transformation.id} xs={12} md={6} lg={4} xl={3}>
                 <TransformationCard
                   id={transformation.id}
