@@ -4,12 +4,18 @@ import CharacterCard from "./CharacterCard";
 import { useGetCharacters } from "../../hooks/useCharacters";
 import PaginationItem from "./PaginationItem";
 import { usePagination } from "../../hooks/usePagination";
+import ErrorMessage from "./ErrorMessage";
+import { handleRetry } from "../../utils/utils";
 
 function CharactersGallery() {
   const { currentPage, handlePageChange } = usePagination(1);
   const { data: characters, isLoading, error } = useGetCharacters(currentPage);
 
-  if (error) return <p>Error al cargar los personajes: {error.message}</p>;
+  if (error) {
+    return (
+      <ErrorMessage error={error} entity="Personajes" onRetry={handleRetry} />
+    );
+  }
 
   if (isLoading && !characters) {
     return (
