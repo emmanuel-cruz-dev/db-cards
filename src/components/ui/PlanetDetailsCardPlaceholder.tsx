@@ -1,7 +1,6 @@
-import React from "react";
 import { Card, Row, Col, Placeholder } from "react-bootstrap";
 
-function TransformationDetailsCardPlaceholder() {
+function PlanetDetailsCardPlaceholder() {
   return (
     <Card className="mb-4 shadow-lg">
       <Row className="g-0">
@@ -34,4 +33,4 @@ function TransformationDetailsCardPlaceholder() {
   );
 }
 
-export default TransformationDetailsCardPlaceholder;
+export default PlanetDetailsCardPlaceholder;

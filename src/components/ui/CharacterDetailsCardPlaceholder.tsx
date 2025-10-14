@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, Row, Col, Placeholder } from "react-bootstrap";
 
 function CharacterDetailsCardPlaceholder() {

@@ -1,8 +1,11 @@
-import React from "react";
 import { Card, Row, Col, Badge } from "react-bootstrap";
 import CharacterDetailsCardPlaceholder from "./CharacterDetailsCardPlaceholder";
+import { CharacterDetailsCardProps } from "../../types/character";
 
-function CharacterDetailsCard({ character, isLoading = false }) {
+function CharacterDetailsCard({
+  character,
+  isLoading = false,
+}: CharacterDetailsCardProps) {
   if (isLoading) return <CharacterDetailsCardPlaceholder />;
 
   return (

@@ -1,8 +1,23 @@
-import React from "react";
 import { Card, Placeholder } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function PlanetCard({ id, name, image, description, isDestroyed, isLoading }) {
+interface PlanetCardProps {
+  id?: string;
+  name?: string;
+  image?: string;
+  description?: string;
+  isDestroyed?: boolean;
+  isLoading?: boolean;
+}
+
+function PlanetCard({
+  id,
+  name,
+  image,
+  description,
+  isDestroyed,
+  isLoading,
+}: PlanetCardProps) {
   if (isLoading) {
     return (
       <Card style={{ width: "21rem" }}>

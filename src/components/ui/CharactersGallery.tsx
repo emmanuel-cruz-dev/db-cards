@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CharacterCard from "./CharacterCard";
 import { useGetCharacters } from "../../hooks/useCharacters";

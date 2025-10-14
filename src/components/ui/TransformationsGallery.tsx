@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import TransformationCard from "./TransformationCard";
 import { useGetTransformations } from "../../hooks/useTransformations";

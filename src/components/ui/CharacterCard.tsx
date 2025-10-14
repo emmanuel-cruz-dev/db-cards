@@ -1,7 +1,7 @@
-import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import CharacterCardPlaceholder from "./CharacterCardPlaceholder";
+import { CharacterCardProps } from "../../types/character";
 
 function CharacterCard({
   id,
@@ -10,7 +10,7 @@ function CharacterCard({
   description,
   image,
   isLoading = false,
-}) {
+}: CharacterCardProps) {
   if (isLoading) return <CharacterCardPlaceholder />;
 
   return (
