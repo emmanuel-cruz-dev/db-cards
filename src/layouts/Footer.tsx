@@ -1,9 +1,8 @@
-import React from "react";
 import { Container } from "react-bootstrap";
 import { Github, ChevronUp } from "react-bootstrap-icons";
 import { scrollToTop } from "../utils/utils";
 
-const Footer = () => {
+function Footer() {
   return (
     <footer className="bg-black text-light text-center p-3">
       <Container>
@@ -52,6 +51,6 @@ const Footer = () => {
       </Container>
     </footer>
   );
-};
+}
 
 export default Footer;
