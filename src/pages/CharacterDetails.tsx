@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { useCharacterById } from "../hooks/useCharacters";
@@ -8,7 +7,7 @@ import AlertMessage from "../components/ui/AlertMessage";
 
 function CharacterDetails() {
   const { id } = useParams();
-  const { data: character, isLoading, error } = useCharacterById(id);
+  const { data: character, isLoading, error } = useCharacterById(id as string);
 
   if (error) return <p>Error loading character: {error.message}</p>;
 
