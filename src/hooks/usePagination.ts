@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-export const usePagination = (initialPage) => {
+export const usePagination = (initialPage: number) => {
   const [page, setPage] = useState(initialPage);
 
-  const handlePageChange = (newPage) => {
+  const handlePageChange = (newPage: number) => {
     setPage(newPage);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
