@@ -8,11 +8,11 @@ const Planets = lazy(() => import("../pages/Planets"));
 const Transformations = lazy(() => import("../pages/Transformations"));
 const PlanetDetails = lazy(() => import("../pages/PlanetDetails"));
 const CharacterDetails = lazy(() => import("../pages/CharacterDetails"));
-const TransformationDetails = lazy(() =>
-  import("../pages/TransformationDetails")
+const TransformationDetails = lazy(
+  () => import("../pages/TransformationDetails")
 );
 
-const AppRouter = () => {
+function AppRouter() {
   return (
     <Suspense fallback={<LoadingFallback />}>
       <Routes>
@@ -29,6 +29,6 @@ const AppRouter = () => {
       </Routes>
     </Suspense>
   );
-};
+}
 
 export default AppRouter;
