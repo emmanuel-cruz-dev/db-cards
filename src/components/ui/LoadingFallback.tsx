@@ -1,7 +1,7 @@
 import DBLogo from "../../assets/dragon-ball-logo.avif";
 import { pulseKeyframes, pulseStyle } from "../../constants/pulseStyles";
 
-const LoadingFallback = () => {
+function LoadingFallback() {
   return (
     <>
       <style>{pulseKeyframes}</style>
@@ -25,6 +25,6 @@ const LoadingFallback = () => {
       </section>
     </>
   );
-};
+}
 
 export default LoadingFallback;
