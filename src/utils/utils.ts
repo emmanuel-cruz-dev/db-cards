@@ -9,7 +9,7 @@ export function handleRetry() {
   window.location.reload();
 }
 
-export const getMessageError = (error, entity) => {
+export const getMessageError = (error: any, entity: string) => {
   if (!error) return null;
 
   if (
