@@ -8,7 +8,7 @@ export const useGetTransformations = () => {
   });
 };
 
-export const useTransformationById = (id) => {
+export const useTransformationById = (id: string) => {
   return useQuery({
     queryKey: ["transformation", id],
     queryFn: () => transformationService.getTransformationById(id),
