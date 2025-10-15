@@ -7,7 +7,12 @@ import CharacterCard from "../components/ui/CharacterCard";
 
 function TransformationDetails() {
   const { id } = useParams();
-  const { data: transformation, isLoading, error } = useTransformationById(id);
+  const idNumber = parseInt(id as string);
+  const {
+    data: transformation,
+    isLoading,
+    error,
+  } = useTransformationById(idNumber);
 
   if (error) return <p>Error loading transformation: {error.message}</p>;
 
