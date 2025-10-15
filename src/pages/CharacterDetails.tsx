@@ -4,12 +4,18 @@ import { useCharacterById } from "../hooks/useCharacters";
 import CharacterDetailsCard from "../components/ui/CharacterDetailsCard";
 import TransformationCard from "../components/ui/TransformationCard";
 import AlertMessage from "../components/ui/AlertMessage";
+import ErrorMessage from "../components/ui/ErrorMessage";
+import { handleRetry } from "../utils/utils";
 
 function CharacterDetails() {
   const { id } = useParams();
-  const { data: character, isLoading, error } = useCharacterById(id as string);
+  const idNumber = parseInt(id as string);
+  const { data: character, isLoading, error } = useCharacterById(idNumber);
 
-  if (error) return <p>Error loading character: {error.message}</p>;
+  if (error)
+    return (
+      <ErrorMessage error={error} entity="Personaje" onRetry={handleRetry} />
+    );
 
   return (
     <Container className="py-4">
