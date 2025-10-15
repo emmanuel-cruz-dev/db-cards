@@ -15,7 +15,7 @@ const getTransformations = async () => {
   }
 };
 
-const getTransformationById = async (id: string) => {
+const getTransformationById = async (id: number) => {
   try {
     const response = await axios.get(`/api/transformations/${id}`);
     return response.data;

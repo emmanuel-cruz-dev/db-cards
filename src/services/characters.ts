@@ -15,7 +15,7 @@ const getCharacters = async (page: number) => {
   }
 };
 
-const getCharacterById = async (id: string) => {
+const getCharacterById = async (id: number) => {
   try {
     const response = await axios.get(`/api/characters/${id}`);
     return response.data;

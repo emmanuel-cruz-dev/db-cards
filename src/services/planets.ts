@@ -15,7 +15,7 @@ const getPlanets = async (page: number) => {
   }
 };
 
-const getPlanetById = async (id: string) => {
+const getPlanetById = async (id: number) => {
   try {
     const response = await axios.get(`/api/planets/${id}`);
     return response.data;
