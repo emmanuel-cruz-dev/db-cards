@@ -1,7 +1,11 @@
 import { Card, Row, Col, Badge } from "react-bootstrap";
 import TransformationDetailsCardPlaceholder from "./TransformationDetailsCardPlaceholder";
+import { TransformationDetailsCardProps } from "../../types/transformation";
 
-function TransformationDetailsCard({ transformation, isLoading = false }) {
+function TransformationDetailsCard({
+  transformation,
+  isLoading = false,
+}: TransformationDetailsCardProps) {
   if (isLoading) return <TransformationDetailsCardPlaceholder />;
 
   return (
@@ -25,8 +29,8 @@ function TransformationDetailsCard({ transformation, isLoading = false }) {
             }}
           >
             <Card.Img
-              src={transformation.image}
-              alt={transformation.name}
+              src={transformation?.image}
+              alt={transformation?.name}
               style={{
                 width: "100%",
                 height: "100%",
@@ -34,7 +38,7 @@ function TransformationDetailsCard({ transformation, isLoading = false }) {
                 padding: "2rem 0",
               }}
             />
-            {transformation.race && (
+            {transformation?.race && (
               <div
                 style={{
                   position: "absolute",
@@ -66,11 +70,11 @@ function TransformationDetailsCard({ transformation, isLoading = false }) {
                 className="display-4 mb-3 fw-bold"
                 style={{ fontSize: "2.5rem" }}
               >
-                {transformation.name}
+                {transformation?.name}
               </Card.Title>
               <Card.Text>
                 <strong>Ki: </strong>
-                {transformation.ki}
+                {transformation?.ki}
               </Card.Text>
 
               <Card.Text
@@ -80,7 +84,7 @@ function TransformationDetailsCard({ transformation, isLoading = false }) {
                   textAlign: "justify",
                 }}
               >
-                {transformation.description}
+                {transformation?.description}
               </Card.Text>
             </div>
           </Card.Body>
