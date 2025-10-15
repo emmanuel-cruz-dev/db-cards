@@ -4,6 +4,8 @@ import { useTransformationById } from "../hooks/useTransformations";
 import TransformationDetailsCard from "../components/ui/TransformationDetailsCard";
 import AlertMessage from "../components/ui/AlertMessage";
 import CharacterCard from "../components/ui/CharacterCard";
+import ErrorMessage from "../components/ui/ErrorMessage";
+import { handleRetry } from "../utils/utils";
 
 function TransformationDetails() {
   const { id } = useParams();
@@ -14,7 +16,14 @@ function TransformationDetails() {
     error,
   } = useTransformationById(idNumber);
 
-  if (error) return <p>Error loading transformation: {error.message}</p>;
+  if (error)
+    return (
+      <ErrorMessage
+        error={error}
+        entity="Transformación"
+        onRetry={handleRetry}
+      />
+    );
 
   return (
     <Container className="py-4">
