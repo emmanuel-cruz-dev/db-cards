@@ -1,9 +1,15 @@
-import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import TransformationCardPlaceholder from "./TransformationCardPlaceholder";
+import { TransformationCardProps } from "../../types/transformation";
 
-function TransformationCard({ id, name, image, ki, isLoading }) {
+function TransformationCard({
+  id,
+  name,
+  image,
+  ki,
+  isLoading,
+}: TransformationCardProps) {
   if (isLoading) return <TransformationCardPlaceholder />;
 
   return (
