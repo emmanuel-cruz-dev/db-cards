@@ -8,7 +8,7 @@ export const useGetCharacters = (page: number) => {
   });
 };
 
-export const useCharacterById = (id: string) => {
+export const useCharacterById = (id: number) => {
   return useQuery({
     queryKey: ["character", id],
     queryFn: () => characterService.getCharacterById(id),

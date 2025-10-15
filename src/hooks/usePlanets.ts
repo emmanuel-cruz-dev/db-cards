@@ -8,7 +8,7 @@ export const useGetPlanets = (page: number) => {
   });
 };
 
-export const usePlanetById = (id: string) => {
+export const usePlanetById = (id: number) => {
   return useQuery({
     queryKey: ["planet", id],
     queryFn: () => planetService.getPlanetById(id),
