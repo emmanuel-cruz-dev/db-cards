@@ -14,6 +14,7 @@ Aplicación web desarrollada con **React** y **Vite** que utiliza la [Dragon Bal
 ## Tecnologías utilizadas
 
 - **React 19**
+- **TypeScript**
 - **Vite** (build y desarrollo rápido)
 - **React Router DOM** (ruteo SPA)
 - **React Bootstrap** y **Bootstrap** (UI y estilos)
