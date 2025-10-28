@@ -4,12 +4,18 @@ import { usePlanetById } from "../hooks/usePlanets";
 import PlanetDetailsCard from "../components/ui/PlanetDetailsCard";
 import CharacterCard from "../components/ui/CharacterCard";
 import AlertMessage from "../components/ui/AlertMessage";
+import ErrorMessage from "../components/ui/ErrorMessage";
+import { handleRetry } from "../utils/utils";
 
 function PlanetDetails() {
   const { id } = useParams();
-  const { data: planet, isLoading, error } = usePlanetById(id);
+  const idNumber = parseInt(id as string);
+  const { data: planet, isLoading, error } = usePlanetById(idNumber);
 
-  if (error) return <p>Error loading planet: {error.message}</p>;
+  if (error)
+    return (
+      <ErrorMessage error={error} entity="Planeta" onRetry={handleRetry} />
+    );
 
   return (
     <Container className="py-4">
