@@ -22,6 +22,7 @@ Aplicación web desarrollada con **React** y **Vite** que utiliza la [Dragon Bal
 - **@tanstack/react-query** (manejo de datos asíncronos y caché)
 - **ESLint** (calidad de código)
 - **Vercel** (despliegue)
+- **NProgress** (barra de progreso)
 
 ## Estructura de carpetas
 
