@@ -13,16 +13,17 @@ Aplicación web desarrollada con **React** y **Vite** que utiliza la [Dragon Bal
 
 ## Tecnologías utilizadas
 
-- **React 19**
-- **TypeScript**
-- **Vite** (build y desarrollo rápido)
-- **React Router DOM** (ruteo SPA)
-- **React Bootstrap** y **Bootstrap** (UI y estilos)
-- **Axios** (peticiones HTTP)
-- **@tanstack/react-query** (manejo de datos asíncronos y caché)
-- **ESLint** (calidad de código)
-- **Vercel** (despliegue)
-- **NProgress** (barra de progreso)
+* **React**: Framework de JavaScript para construir interfaces de usuario.
+* **TypeScript**: Superset de JavaScript que agrega tipado estático y mejora la mantenibilidad del código.
+* **Bootstrap**: Framework de CSS para construir interfaces de usuario responsive.
+* **Vite**: Herramienta de build y desarrollo rápido para aplicaciones web modernas.
+* **React Router DOM**: Librería para el manejo de rutas en aplicaciones de una sola página (SPA).
+* **React Bootstrap**: Librería de componentes de React basados en Bootstrap.
+* **Axios**: Cliente HTTP para realizar peticiones a APIs y servicios web.
+* **@tanstack/react-query**: Librería para manejo de datos asíncronos, caching y sincronización.
+* **ESLint**: Herramienta de linting para mantener la calidad y consistencia del código.
+* **Vercel**: Plataforma de despliegue y hosting para aplicaciones web.
+* **NProgress**: Librería para mostrar una barra de progreso durante la navegación.
 
 ## Estructura de carpetas
 
