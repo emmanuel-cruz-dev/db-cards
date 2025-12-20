@@ -1,7 +1,11 @@
 import { Card, Row, Col, Badge } from "react-bootstrap";
 import PlanetDetailsCardPlaceholder from "./PlanetDetailsCardPlaceholder";
+import { PlanetDetailsCardProps } from "../../types/planet";
 
-function PlanetDetailsCard({ planet, isLoading = false }) {
+function PlanetDetailsCard({
+  planet,
+  isLoading = false,
+}: PlanetDetailsCardProps) {
   if (isLoading) return <PlanetDetailsCardPlaceholder />;
 
   return (
