@@ -1,14 +1,6 @@
 import { Card, Placeholder } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
-interface PlanetCardProps {
-  id?: string;
-  name?: string;
-  image?: string;
-  description?: string;
-  isDestroyed?: boolean;
-  isLoading?: boolean;
-}
+import { PlanetCardProps } from "../../types/planet";
 
 function PlanetCard({
   id,
